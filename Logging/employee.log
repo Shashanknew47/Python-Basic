@@ -1,0 +1,4 @@
+INFO:__main__:Created Employee: {self.fullname} - {self.email}
+INFO:__main__:Created Employee: {self.fullname} - {self.email}
+INFO:__main__:Created Employee: Shashank Jain - Shashank.Jain@gmail.com
+INFO:__main__:Created Employee: Jane Doe - Jane.Doe@gmail.com

@@ -1,0 +1,73 @@
+--> Purpost of a logging environment to load packages which are specific of a certian project. Using logging environment you need  python 
+    3.3 or higher. It comes with an standard library. 
+
+--> Use ----"pip list"----- commands to check installed packages.Normally you will notice a long list of pakages which you have installed 
+    for that particular python.    
+
+-->To install a logging environment we need to run command in commandline ------"python -m venv project_venv"----- where project_env is  
+   the name of the project. This command wil create a foler "project_env".
+
+--> To Activate this installed environment we need to use command -----"Scripts/activate.bat"--------.
+     you will notice environment name in (project-env) in command line.
+
+
+--> Now if you will check python location with ----------"where python" --------- command. you will find out current python location 
+    is in project_env/Scripts folder. wich contrain no other packages if you will check with "pip list" commnd. 
+    (project_env) λ where python
+        C:/Users/Shashank/Notes/Python basic/Virtual_environment/project_env/Scripts/python.exe
+        C:/Python38/python.exe
+        C:/Users/Shashank/AppData/Local/Programs/Python/Python37-32/python.exe
+        C:/Users/Shashank/AppData/Local/Microsoft/WindowsApps/python.exe
+
+
+        (project_env) λ pip list
+    Package    Version
+    ---------- -------
+    pip        20.1.1
+    setuptools 47.1.0
+      
+
+--> Now in this environment you can download only specific packages which is required only for this project.
+    For a example here we have downloaded "requests and pytz" .
+
+--> Now you will notice these packages have been downloaded in the python environment as apart pytz and requests other are it's      
+            dependencies. 
+            (project_env) λ pip list
+        Package    Version
+        ---------- ---------
+        certifi    2020.6.20
+        chardet    3.0.4
+        idna       2.10
+        pip        20.1.1
+        pytz       2020.4
+        requests   2.24.0
+        setuptools 47.1.0
+        urllib3    1.25.11
+
+--> If you want to use these packages installed in this environment in any other project then use.----"pip freeze" ---- command.
+            (project_env) λ pip freeze
+            certifi==2020.6.20
+            chardet==3.0.4 
+            idna==2.10
+            pytz==2020.4
+            requests==2.24.0
+            urllib3==1.25.11
+     
+        -> Now you can either save this output in test file. Give a name requirements.txt.
+
+        -> if you want to downloaded these packages in that project then create a logging environment of that project and
+            use command ------"pip install -r requirements.txt"----------- Note(here requirements.txt is text file where you copy and 
+             pasted all packages from "pip freeze" command.)
+
+--> To decativa this environment use command -----"decativate" -------
+
+--> To delete the logging environment use command -----"rmdir project_env /s"------ Note(here project_env is the logging environment name)
+
+
+--> If you want to create a logging environment which is having access of our other system python packages too. For that use command
+        -----"python -m venv project_venv --system-site-packages"-----
+
+--> If you wana see packages which we install locally then use command. 
+       -----"pip list --local"-------
+
+       
